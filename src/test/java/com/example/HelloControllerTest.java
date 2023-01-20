@@ -37,7 +37,7 @@ public class HelloControllerTest {
     @Test
     public void testDefaultPage() throws Exception {
 
-        MvcResult result = this.mockMvc.perform(get("/"))
+        MvcResult result = this.mockMvc.perform(get("/hello"))
                 /*.andDo(print())*/
                 .andExpect(status().isOk())
                 .andReturn();
