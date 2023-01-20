@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
     //@RequestMapping(value = "/", method = RequestMethod.GET)
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String defaultPage(ModelMap model) {
         return "hello";
     }
