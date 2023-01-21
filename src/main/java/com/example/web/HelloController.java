@@ -16,7 +16,7 @@ public class HelloController {
     }
 
     //@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
-    @GetMapping("/hello/{name:.+}")
+    @GetMapping("/hello/{name}")
     public ModelAndView hello(@PathVariable("name") String name) {
 
         ModelAndView model = new ModelAndView();

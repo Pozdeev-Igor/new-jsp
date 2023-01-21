@@ -51,13 +51,13 @@ public class HelloControllerTest {
     @Test
     public void testHelloPage() throws Exception {
 
-        MvcResult result = this.mockMvc.perform(get("/hello/mkyong"))
+        MvcResult result = this.mockMvc.perform(get("/hello/user"))
                 .andExpect(status().isOk())
                 .andReturn();
 
         ModelAndView modelAndView = result.getModelAndView();
         assertEquals("hello", modelAndView.getViewName());
-        assertEquals("mkyong", modelAndView.getModel().get("message"));
+        assertEquals("user", modelAndView.getModel().get("message"));
 
     }
 
