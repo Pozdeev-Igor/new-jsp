@@ -12,7 +12,7 @@ public class HelloController {
     //@RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/hello")
     public String defaultPage(ModelMap model) {
-        return "message";
+        return "hello";
     }
 
     //@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
