@@ -5,20 +5,21 @@
 <head>
   <title>Spring Web MVC and JSP</title>
 
-  <spring:url value="./resources/core/css/main.css" var="coreCss" />
-  <spring:url value="./webjars/bootstrap/5.2.0/css/bootstrap.min.css" var="bootstrapCss" />
+<%--  <spring:url value="/resources/core/css/main.css" var="coreCss" />--%>
+<%--  <spring:url value="/webjars/bootstrap/5.2.0/css/bootstrap.min.css" var="bootstrapCss" />--%>
 
-  <link href="${bootstrapCss}" rel="stylesheet" />
-  <link href="${coreCss}" rel="stylesheet" />
+<%--  <link href="${bootstrapCss}" rel="stylesheet" />--%>
+<%--  <link href="${coreCss}" rel="stylesheet" />--%>
 </head>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-<%--  <a class="navbar-brand" href="#">Mkyong.com</a>--%>
-</nav>
+<%--<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">--%>
+<%--&lt;%&ndash;  <a class="navbar-brand" href="#">Mkyong.com</a>&ndash;%&gt;--%>
+<%--</nav>--%>
 
-<main role="main" class="container">
+<%--<main role="main" class="container">--%>
 
-  <div class="starter-template">
+<%--  <div class="starter-template">--%>
+    <div>
     <h1>Spring Web MVC JSP Example</h1>
     <h2>
       <c:if test="${not empty message}">
@@ -31,13 +32,13 @@
     </h2>
   </div>
 
-</main>
+<%--</main>--%>
 
-<spring:url value="./resources/core/js/main.js" var="coreJs" />
-<spring:url value="./webjars/bootstrap/5.2.0/js/bootstrap.min.js" var="bootstrapJs" />
+<%--<spring:url value="./resources/core/js/main.js" var="coreJs" />--%>
+<%--<spring:url value="./webjars/bootstrap/5.2.0/js/bootstrap.min.js" var="bootstrapJs" />--%>
 
-<script src="${coreJs}"></script>
-<script src="${bootstrapJs}"></script>
+<%--<script src="${coreJs}"></script>--%>
+<%--<script src="${bootstrapJs}"></script>--%>
 
 </body>
 </html>
