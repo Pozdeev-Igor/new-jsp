@@ -43,7 +43,7 @@ public class HelloControllerTest {
                 .andReturn();
 
         ModelAndView modelAndView = result.getModelAndView();
-        assertEquals("hello", modelAndView.getViewName());
+        assertEquals("message", modelAndView.getViewName());
         assertNull(modelAndView.getModel().get("message"));
 
     }
@@ -56,7 +56,7 @@ public class HelloControllerTest {
                 .andReturn();
 
         ModelAndView modelAndView = result.getModelAndView();
-        assertEquals("hello", modelAndView.getViewName());
+        assertEquals("message", modelAndView.getViewName());
         assertEquals("user", modelAndView.getModel().get("message"));
 
     }

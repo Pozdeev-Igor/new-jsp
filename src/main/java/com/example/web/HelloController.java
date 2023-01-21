@@ -12,7 +12,7 @@ public class HelloController {
     //@RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/hello")
     public String defaultPage(ModelMap model) {
-        return "hello";
+        return "message";
     }
 
     //@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
@@ -20,7 +20,7 @@ public class HelloController {
     public ModelAndView hello(@PathVariable("name") String name) {
 
         ModelAndView model = new ModelAndView();
-        model.setViewName("hello");
+        model.setViewName("message");
         model.addObject("message", name);
 
         return model;
