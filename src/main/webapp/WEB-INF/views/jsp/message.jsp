@@ -12,7 +12,7 @@
             <h2>Hello, ${message}</h2>
         </div>
         <div>
-            <a href="new-jsp/hello">Go back</a>
+            <a href="javascript:history.back()">Go Back</a>
         </div>
     </div>
 </body>
