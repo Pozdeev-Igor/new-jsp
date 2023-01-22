@@ -12,7 +12,7 @@
             <h2>Hello, ${message}</h2>
         </div>
         <div>
-            <a href="/hello">Go back</a>
+            <a href="new-jsp/hello">Go back</a>
         </div>
     </div>
 </body>
