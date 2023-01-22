@@ -11,6 +11,9 @@
             <h1>Spring Web MVC</h1>
             <h2>Hello, ${message}</h2>
         </div>
+        <div>
+            <a href="/hello">Go back</a>
+        </div>
     </div>
 </body>
 </html>
