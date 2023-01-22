@@ -8,8 +8,8 @@
 <body>
     <div>
         <div>
-            <h1>Spring Web MVC JSP Example</h1>
-            <h2>Hello ${message}</h2>
+            <h1>Spring Web MVC</h1>
+            <h2>Hello, ${message}</h2>
         </div>
     </div>
 </body>

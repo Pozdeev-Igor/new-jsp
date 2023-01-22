@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-    <h1>Spring Web MVC JSP Example</h1>
+    <h1>Spring Web MVC</h1>
     <h2>Welcome!</h2>
 </div>
 </body>
