@@ -1,5 +1,7 @@
 package com.example.service;
 
+import org.springframework.web.servlet.ModelAndView;
+
 public class CommandExecutor {
 
     Command insert;
@@ -14,8 +16,15 @@ public class CommandExecutor {
         this.delete = delete;
     }
 
-    public String insert() {
-        return insert.execute();
+//    public String insert() {
+//        return insert.execute();
+//    }
+
+    public ModelAndView insert() {
+        ModelAndView model = new ModelAndView();
+        model.setViewName(insert.execute());
+        model.addObject("message", insert.execute());
+        return model;
     }
 
     public String update() {
