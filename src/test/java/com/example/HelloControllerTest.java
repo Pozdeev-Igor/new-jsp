@@ -56,7 +56,7 @@ public class HelloControllerTest {
                 .andReturn();
 
         ModelAndView modelAndView = result.getModelAndView();
-        assertEquals("message", modelAndView.getViewName());
+        assertEquals("user", modelAndView.getViewName());
         assertEquals("user", modelAndView.getModel().get("message"));
 
     }
