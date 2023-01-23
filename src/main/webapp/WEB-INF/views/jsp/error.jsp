@@ -9,7 +9,9 @@
     <div>
         <div>
             <h1>Spring Web MVC</h1>
-            <h2>Hello, ${message}</h2>
+            <h2>Hello, this is an error message caused by:</h2>
+            <h2>passed to URL something wrong: "${message}"</h2>
+            <h2>please try again</h2>
         </div>
         <div>
             <a href="javascript:history.back()">Go Back</a>

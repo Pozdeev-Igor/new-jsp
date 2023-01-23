@@ -33,6 +33,25 @@ public class HelloController {
         model.addObject("message", name);
 //        return model;
 
-        return executor.insert();
+        switch (name) {
+            case "insert":
+                return executor.insert();
+//                break;
+            case "update":
+                return executor.update();
+//                break;
+            case "select":
+                return executor.select();
+//                break;
+            case "delete":
+                return executor.delete();
+//                break;
+            default:
+                model.setViewName("error");
+                return model;
+        }
+
+
+//        return executor.insert();
     }
 }
