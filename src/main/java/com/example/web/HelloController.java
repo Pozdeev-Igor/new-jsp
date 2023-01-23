@@ -9,8 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
-
-    ControllerService service;
+    CommandExecutor executor;
+    CommandRunner runner;
 
     @GetMapping("/hello")
     public String defaultPage(ModelMap model) {
@@ -19,21 +19,27 @@ public class HelloController {
 
     @GetMapping("/hello/{name}")
     public ModelAndView hello(@PathVariable("name") String name) {
-
-        return service.runMethod(name);
-
-//        runner = new CommandRunner();
-//        executor = new CommandExecutor(new InsertCommand(runner),
-//                new DeleteCommand(runner),
-//                new UpdateCommand(runner),
-//                new SelectCommand(runner));
-
-
-//        ModelAndView model = new ModelAndView();
-//        model.setViewName(name);
-//        model.addObject("message", name);
-//        return model;
+        ModelAndView model = new ModelAndView();
+        runner = new CommandRunner();
+        executor = new CommandExecutor(
+                new InsertCommand(runner),
+                new DeleteCommand(runner),
+                new UpdateCommand(runner),
+                new SelectCommand(runner));
 
 
+        switch (name) {
+            case "insert":
+                return executor.insert();
+            case "update":
+                return executor.update();
+            case "select":
+                return executor.select();
+            case "delete":
+                return executor.delete();
+            default:
+                model.setViewName("error");
+                return model;
+        }
     }
 }
