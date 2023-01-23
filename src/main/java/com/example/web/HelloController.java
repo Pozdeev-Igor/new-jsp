@@ -28,22 +28,5 @@ public class HelloController {
                 new SelectCommand(runner));
 
         return executor.result(name);
-
-
-
-//        switch (name) {
-//            case "insert":
-//                return executor.insert();
-//            case "update":
-//                return executor.update();
-//            case "select":
-//                return executor.select();
-//            case "delete":
-//                return executor.delete();
-//            default:
-//                model.setViewName("error");
-//                model.addObject("message", name);
-//                return model;
-//        }
     }
 }
