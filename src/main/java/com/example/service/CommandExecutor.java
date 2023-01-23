@@ -18,10 +18,6 @@ public class CommandExecutor {
         this.delete = delete;
     }
 
-//    public String insert() {
-//        return insert.execute();
-//    }
-
     public ModelAndView insert() {
         model = new ModelAndView();
         model.setViewName(insert.execute());
@@ -29,20 +25,12 @@ public class CommandExecutor {
         return model;
     }
 
-//    public String update() {
-//        return update.execute();
-//    }
-
     public ModelAndView update() {
         model = new ModelAndView();
         model.setViewName(update.execute());
-        model.addObject("message", insert.execute());
+        model.addObject("message", update.execute());
         return model;
     }
-
-//    public String select() {
-//        return select.execute();
-//    }
 
     public ModelAndView select() {
         model = new ModelAndView();
@@ -50,10 +38,6 @@ public class CommandExecutor {
         model.addObject("message", select.execute());
         return model;
     }
-
-//    public String delete() {
-//        return  delete.execute();
-//    }
 
     public ModelAndView delete() {
         model = new ModelAndView();
