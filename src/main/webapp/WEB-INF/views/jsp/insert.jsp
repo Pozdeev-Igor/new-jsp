@@ -10,6 +10,7 @@
         <div>
             <h1>Spring Web MVC</h1>
             <h2>Hello, this is "insert" page</h2>
+            <h5>${message}</h5>
         </div>
         <div>
             <a href="javascript:history.back()">Go Back</a>

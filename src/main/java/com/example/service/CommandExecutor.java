@@ -45,4 +45,18 @@ public class CommandExecutor {
         model.addObject("message", model.getViewName());
         return model;
     }
+
+    public ModelAndView result(String name) {
+        model = new ModelAndView();
+        if (name.equals(delete.toString()) || name.equals(select.toString())
+                || name.equals(update.toString()) || name.equals(insert.toString())) {
+            model.setViewName(name);
+            model.addObject("message", name);
+            return model;
+        } else {
+            model.setViewName("error");
+            model.addObject("message", name);
+            return model;
+        }
+    }
 }
