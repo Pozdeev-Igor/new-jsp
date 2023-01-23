@@ -18,38 +18,38 @@ public class CommandExecutor {
         this.delete = delete;
     }
 
-    public ModelAndView insert() {
-        model = new ModelAndView();
-        model.setViewName(insert.execute());
-        model.addObject("message", model.getViewName());
-        return model;
-    }
-
-    public ModelAndView update() {
-        model = new ModelAndView();
-        model.setViewName(update.execute());
-        model.addObject("message", model.getViewName());
-        return model;
-    }
-
-    public ModelAndView select() {
-        model = new ModelAndView();
-        model.setViewName(select.execute());
-        model.addObject("message", model.getViewName());
-        return model;
-    }
-
-    public ModelAndView delete() {
-        model = new ModelAndView();
-        model.setViewName(delete.execute());
-        model.addObject("message", model.getViewName());
-        return model;
-    }
+//    public ModelAndView insert() {
+//        model = new ModelAndView();
+//        model.setViewName(insert.execute());
+//        model.addObject("message", model.getViewName());
+//        return model;
+//    }
+//
+//    public ModelAndView update() {
+//        model = new ModelAndView();
+//        model.setViewName(update.execute());
+//        model.addObject("message", model.getViewName());
+//        return model;
+//    }
+//
+//    public ModelAndView select() {
+//        model = new ModelAndView();
+//        model.setViewName(select.execute());
+//        model.addObject("message", model.getViewName());
+//        return model;
+//    }
+//
+//    public ModelAndView delete() {
+//        model = new ModelAndView();
+//        model.setViewName(delete.execute());
+//        model.addObject("message", model.getViewName());
+//        return model;
+//    }
 
     public ModelAndView result(String name) {
         model = new ModelAndView();
-        if (name.equals(delete.toString()) || name.equals(select.toString())
-                || name.equals(update.toString()) || name.equals(insert.toString())) {
+        if (name.equals("delete") || name.equals("select")
+                || name.equals("update") || name.equals("insert")) {
             model.setViewName(name);
             model.addObject("message", name);
             return model;
