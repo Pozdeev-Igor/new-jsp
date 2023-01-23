@@ -10,8 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloController {
 
-
-
     ControllerService service;
 
     @GetMapping("/hello")

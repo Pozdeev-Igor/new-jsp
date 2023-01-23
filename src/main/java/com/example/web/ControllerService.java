@@ -10,6 +10,11 @@ public class ControllerService {
     CommandRunner runner;
     CommandExecutor executor;
 
+    public ControllerService(CommandRunner runner, CommandExecutor executor) {
+        this.runner = runner;
+        this.executor = executor;
+    }
+
     public ModelAndView runMethod(String name) {
         runner = new CommandRunner();
         executor = new CommandExecutor(new InsertCommand(runner),
