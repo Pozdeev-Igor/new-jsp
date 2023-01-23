@@ -21,28 +21,28 @@ public class CommandExecutor {
     public ModelAndView insert() {
         model = new ModelAndView();
         model.setViewName(insert.execute());
-        model.addObject("message", insert.execute());
+        model.addObject("message", model.getViewName());
         return model;
     }
 
     public ModelAndView update() {
         model = new ModelAndView();
         model.setViewName(update.execute());
-        model.addObject("message", update.execute());
+        model.addObject("message", model.getViewName());
         return model;
     }
 
     public ModelAndView select() {
         model = new ModelAndView();
         model.setViewName(select.execute());
-        model.addObject("message", select.execute());
+        model.addObject("message", model.getViewName());
         return model;
     }
 
     public ModelAndView delete() {
         model = new ModelAndView();
         model.setViewName(delete.execute());
-        model.addObject("message", delete.execute());
+        model.addObject("message", model.getViewName());
         return model;
     }
 }

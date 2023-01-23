@@ -39,6 +39,7 @@ public class HelloController {
                 return executor.delete();
             default:
                 model.setViewName("error");
+                model.addObject("message", name);
                 return model;
         }
     }
