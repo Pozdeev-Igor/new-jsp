@@ -2,18 +2,18 @@ package com.example.service;
 
 public class CommandRunner {
     public String insert(){
-        return "INSERT";
+        return "insert";
     }
 
     public String update(){
-        return "UPDATE";
+        return "update";
     }
 
     public String select(){
-        return "SELECT";
+        return "select";
     }
 
     public String delete(){
-        return "DELETE";
+        return "delete";
     }
 }
